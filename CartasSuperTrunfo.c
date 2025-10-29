@@ -5,27 +5,38 @@ int main(void){
     // Criação das variáveis da carta 1
     char estado1[10];
     char cidade1[50];
-    int populacao1;
+    unsigned long int populacao1;
     float area1;
     float PIB1;
     int pturistico1;
-    // Variável do nível aventureiro
+        // Variável do nível aventureiro
     float dpop1;
     float PIBc1;
+            // Variável do nível Mestre
+    double superpoder1;
 
     // Criação das variáveis da carta 2
     char estado2[10];
     char cidade2[20]; 
-    int populacao2;
+    unsigned long int populacao2;
     float area2;
     float PIB2;
     int pturistico2;
-
-     // Variável do nível aventureiro
+        // Variável do nível aventureiro
     float dpop2 = 0;
     float PIBc2;
+            // Variável do nível Mestre
+    double superpoder2;
+    int comparapopulacao;
+    int comparaarea;
+    int comparapib;
+    int comparapturistico;
+    int comparadensidadepop;
+    int comparaPIBc;
+    int comparasuperpoder;
 
     printf("\n-----------------------------------------------------\n");
+    
     // Preenchimento da carta 1 pelo usuário
     printf("\nVamos preencher as cartas do Super Trunfo\n");
     printf("\n-----------------------------------------------------\n");
@@ -42,12 +53,9 @@ int main(void){
     printf("Digite o número de pontos turísticos da cidade: ");
     scanf("%d", &pturistico1);
     
-    // Solicitando os dados da carta 2
-
-    printf("\n-----------------------------------------------------\n");
-   
     // Preenchimento da carta 2 pelo usuário
-    printf("\nVamos preencher os dados da carta 2\n");
+    printf("\n-----------------------------------------------------\n");
+       printf("\nVamos preencher os dados da carta 2\n");
     printf("\n-----------------------------------------------------\n");
     printf("Digite o Estado.\nExemplo: RJ / SP / MG / ES / BA / SE: ");
     scanf("%s", estado2);
@@ -69,6 +77,10 @@ int main(void){
     dpop2 = populacao2 / area2;
     PIBc2 = PIB2 / populacao2;
     
+    // Cálculo do Nível Mestre
+    superpoder1 = populacao1 + area1 + PIB1 + pturistico1 + PIBc1 + (1/dpop1);
+    superpoder2 = populacao2 + area2 + PIB2 + pturistico2 + PIBc2 + (1/dpop2);
+
     // Imprimindo a carta 1
     printf("\n-----------------------------------------------------\n");
     printf("CARTA 1 - Código %s01\n",estado1);
