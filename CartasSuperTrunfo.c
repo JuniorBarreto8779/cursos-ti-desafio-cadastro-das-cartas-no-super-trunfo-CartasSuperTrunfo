@@ -1,33 +1,39 @@
 #include <stdio.h>
 
-int main(){
+int main(void){
+
     // Criação das variáveis da carta 1
     char estado1[10];
-    char codigo1[3] = "C1";
-    char cidade1[20];
+    char cidade1[50];
     int populacao1;
     float area1;
     float PIB1;
     int pturistico1;
+    // Variável do nível aventureiro
+    float dpop1;
+    float PIBc1;
 
     // Criação das variáveis da carta 2
     char estado2[10];
-    char codigo2[3] = "C2";
-    char cidade2[20];
+    char cidade2[20]; 
     int populacao2;
     float area2;
     float PIB2;
     int pturistico2;
 
+     // Variável do nível aventureiro
+    float dpop2 = 0;
+    float PIBc2;
+
     printf("\n-----------------------------------------------------\n");
     // Preenchimento da carta 1 pelo usuário
     printf("\nVamos preencher as cartas do Super Trunfo\n");
     printf("\n-----------------------------------------------------\n");
-    printf("Digite o Estado. \nOpões:  RJ / SP / MG / ES / BA / SE / AL / PE: ");
+    printf("Digite o Estado.\nExemplo: RJ / SP / MG / ES / BA / SE: ");
     scanf("%s", estado1);
     printf("Digite o nome da cidade: ");
     scanf("%s", cidade1);
-    printf("Digite a População ( Número de Habitantes): ");
+    printf("Digite a População (Número de Habitantes): ");
     scanf("%d", &populacao1);
     printf("Digite a área da Cidade: ");
     scanf("%f", &area1);
@@ -43,7 +49,7 @@ int main(){
     // Preenchimento da carta 2 pelo usuário
     printf("\nVamos preencher os dados da carta 2\n");
     printf("\n-----------------------------------------------------\n");
-    printf("Digite o Estado. \nOpões:  RJ / SP / MG / ES / BA / SE / AL / PE: ");
+    printf("Digite o Estado.\nExemplo: RJ / SP / MG / ES / BA / SE: ");
     scanf("%s", estado2);
     printf("Digite o nome da cidade: ");
     scanf("%s", cidade2);
@@ -56,10 +62,16 @@ int main(){
     printf("Digite o número de pontos turísticos da cidade: ");
     scanf("%d", &pturistico2);
     
+    // Calculos do nível Aventureiro
+    dpop1 = populacao1 / area1;
+    PIBc1 = PIB1 / populacao1;
+
+    dpop2 = populacao2 / area2;
+    PIBc2 = PIB2 / populacao2;
     
     // Imprimindo a carta 1
     printf("\n-----------------------------------------------------\n");
-    printf("CARTA 1 %s - %s", cidade1, codigo1);
+    printf("CARTA 1 - Código %s01\n",estado1);
     printf("\n-----------------------------------------------------\n");
     printf("Estado: %s\n", estado1);
     printf("Cidade: %s\n", cidade1);
@@ -67,10 +79,13 @@ int main(){
     printf("Área da cidade: %.2f\n",area1);
     printf("PIB da Cidade: %.2f\n",PIB1);
     printf("Número de pontos turísticos da cidade: %d\n", pturistico1);
+    // Incluindo linha de impressão nível aventureiro
+    printf("Densidade Populacional: %2.f hab/km2\n",dpop1);
+    printf("PIB per Capta: R$%2.f\n",PIBc1);
         
     // Imprimindo a carta 2
     printf("\n-----------------------------------------------------\n");
-    printf("CARTA 2 %s - %s", cidade2, codigo2);
+    printf("CARTA 2 - Código %s01\n",estado2);
     printf("\n-----------------------------------------------------\n");
     printf("Estado: %s\n", estado2);
     printf("Cidade: %s\n", cidade2);
@@ -78,7 +93,13 @@ int main(){
     printf("Área da cidade: %.2f\n",area2);
     printf("PIB da Cidade: %.2f\n",PIB2);
     printf("Número de pontos turísticos da cidade: %d\n", pturistico2);
+   // Incluindo linha de impressão nível aventureiro
+    printf("Densidade Populacional: %2.f hab/km2\n",dpop2);
+    printf("PIB per Capta: R$%2.f\n",PIBc2);
     printf("\n-----------------------------------------------------\n");
+    
+    
+  
 
     return 0;
 
