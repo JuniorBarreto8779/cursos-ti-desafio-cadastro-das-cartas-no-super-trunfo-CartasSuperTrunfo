@@ -124,13 +124,13 @@ int main(void){
     
         //Nível Mestre - Comparando as Cartas
     printf("\nComparando as Cartas:\n");
-    printf("População: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparapopulacao);
-    printf("Área: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparaarea);
-    printf("PIB: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparapib);
-    printf("Pontos Turísticos: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparapturistico);
-    printf("Densidade Populacional: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparadensidadepop);
-    printf("PIB per capta: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparaPIBc);
-    printf("Super poder: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparasuperpoder);
+    printf("População: Carta 1 venceu?(1 = Sim / 0 = Nâo) >> %d <<\n", comparapopulacao);
+    printf("Área: Carta 1 venceu?(1 = Sim / 0 = Nâo) >> %d <<\n", comparaarea);
+    printf("PIB: Carta 1 venceu?(1 = Sim / 0 = Nâo) >> %d <<\n", comparapib);
+    printf("Pontos Turísticos: Carta 1 venceu?(1 = Sim / 0 = Nâo) >> %d <<\n", comparapturistico);
+    printf("Densidade Populacional: Carta 1 venceu?(1 = Sim / 0 = Nâo) >> %d <<\n", comparadensidadepop);
+    printf("PIB per capta: Carta 1 venceu?(1 = Sim / 0 = Nâo) >> %d <<\n", comparaPIBc);
+    printf("Super poder: Carta 1 venceu?(1 = Sim / 0 = Nâo) >> %d << \n", comparasuperpoder);
 
     
   
