@@ -81,6 +81,14 @@ int main(void){
     superpoder1 = populacao1 + area1 + PIB1 + pturistico1 + PIBc1 + (1/dpop1);
     superpoder2 = populacao2 + area2 + PIB2 + pturistico2 + PIBc2 + (1/dpop2);
 
+    comparapopulacao = populacao1 > populacao2;
+    comparaarea = area1 > area2;
+    comparapib = PIB1 > PIB2;
+    comparapturistico = pturistico1 > pturistico2;
+    comparadensidadepop = dpop1 > dpop2;
+    comparaPIBc = PIBc1 > PIBc2;
+    comparasuperpoder = superpoder1 > superpoder2;
+
     // Imprimindo a carta 1
     printf("\n-----------------------------------------------------\n");
     printf("CARTA 1 - Código %s01\n",estado1);
@@ -94,7 +102,9 @@ int main(void){
     // Incluindo linha de impressão nível aventureiro
     printf("Densidade Populacional: %2.f hab/km2\n",dpop1);
     printf("PIB per Capta: R$%2.f\n",PIBc1);
-        
+        // Incluindo linha de impressão nível Mestre
+    printf("Super poder: %2.f", superpoder1);
+
     // Imprimindo a carta 2
     printf("\n-----------------------------------------------------\n");
     printf("CARTA 2 - Código %s01\n",estado2);
@@ -108,8 +118,20 @@ int main(void){
    // Incluindo linha de impressão nível aventureiro
     printf("Densidade Populacional: %2.f hab/km2\n",dpop2);
     printf("PIB per Capta: R$%2.f\n",PIBc2);
+    // Incluindo linha de impressão nível Mestre
+    printf("Super poder: %2.f", superpoder2);
     printf("\n-----------------------------------------------------\n");
     
+        //Nível Mestre - Comparando as Cartas
+    printf("\nComparando as Cartas:\n");
+    printf("População: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparapopulacao);
+    printf("Área: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparaarea);
+    printf("PIB: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparapib);
+    printf("Pontos Turísticos: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparapturistico);
+    printf("Densidade Populacional: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparadensidadepop);
+    printf("PIB per capta: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparaPIBc);
+    printf("Super poder: Carta 1 venceu? >> %d<< (1 = Sim / 0 = Nâo)\n", comparasuperpoder);
+
     
   
 
